@@ -2,6 +2,15 @@
 }
 .logo
 {
-    width:500px;
-    height:500px;
+    width:30px;
+    height:30px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    align-content: center;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
 }
