@@ -1,0 +1,60 @@
+﻿@model BookModel
+@{
+    ViewData["Title"] = "Add New Book";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (ViewBag.IsSuccess == true)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Congratulations!</strong> Data is saved to database.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<form method="post" asp-action="AddNewBook">
+    <div class="container text-xl-center">
+        <h1 class="display-4">Add New Book</h1>
+        <div class="form-group">
+            <label asp-for="LanguageId"></label>
+            <select asp-for="LanguageId" class="form-group" asp-items="ViewBag.laguange">
+                <option value="">Select Language</option>
+            </select>
+            <span asp-validation-for="LanguageId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" placeholder="Book Name" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Author"></label>
+            <input asp-for="Author" placeholder="Author Name" />
+            <span asp-validation-for="Author" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <input asp-for="Description" placeholder="Description" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Category"></label>
+            <input asp-for="Category" placeholder="Category" />
+            <span asp-validation-for="Category" class="text-danger"></span>
+        </div>
+        @*<div class="form-group">
+            <label asp-for=""></label>
+            <input asp-for="Language" placeholder="Book Language" />
+        </div>*@
+        <div class="form-group">
+            <label asp-for="TotalPages"></label>
+            <input asp-for="TotalPages" placeholder="No. of Pages" />
+            <span asp-validation-for="TotalPages" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" asp-controller="Book" asp-action="AddNewBook" class="btn btn-primary" />
+        </div>
+    </div>
+
+
+</form>
+

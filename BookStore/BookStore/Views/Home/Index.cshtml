@@ -1,29 +1,17 @@
 ﻿
-@{
-    Layout = null;
-}
+@*@{
+    ViewData["Title"]="Home";
+}*@
 
-<!DOCTYPE html>
+<h1 class="h1">Welcome to Book Store Application!!!</h1>
+@*<h1>@data.Id</h1>
+<h1>@data.Name1</h1>*@
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link href="~/css/site.css" rel="stylesheet" />
-</head>
-<body>
-    <img src="~/Images/download.jpg" class="logo" alt="logo" />
-    <h1>Welcome to Book Store Application!!!</h1>
-    <h1>@DateTime.Now</h1>
-    @{
-        int a = 10;
-        int b = 20;
-        int c = a + b;
+@section scripts
+    {
+    <script>
+        $(document).ready(function() {
+           // alert("document is ready");
+        })
+    </script>
     }
-
-    <h1>@c</h1>
-
-    <h1>Email-pawarrahul@gmail.com</h1>
-    <h1>Insta-@@Dzire4912</h1>
-</body>
-</html>
